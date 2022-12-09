@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221209 09:57:09.554" rpa="true" schemaversion="3">
+<suite id="s1" name="Sample" source="c:\Users\rizwanfarooz.ks\Desktop\Level 2\sample.robot">
+<test id="s1-t1" name="Orders robots from RobotSpareBin Industries Inc." line="9">
+<kw name="Close Application">
+<kw name="Get Selection From User" library="Dialogs">
+<var>${users}</var>
+<arg>You want to close the browser</arg>
+<arg>Yes</arg>
+<arg>No</arg>
+<doc>Pauses execution and asks user to select a value.</doc>
+<msg timestamp="20221209 09:57:14.734" level="INFO">${users} = Yes</msg>
+<status status="PASS" starttime="20221209 09:57:12.246" endtime="20221209 09:57:14.747"/>
+</kw>
+<if>
+<branch type="IF" condition="${users} == &quot;Yes&quot;">
+<kw name="Close All Browsers" library="RPA.Browser.Selenium">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20221209 09:57:14.786" endtime="20221209 09:57:14.787"/>
+</kw>
+<msg timestamp="20221209 09:57:14.788" level="FAIL">Evaluating IF condition failed: Evaluating expression 'Yes == "Yes"' failed: NameError: name 'Yes' is not defined nor importable as module</msg>
+<status status="FAIL" starttime="20221209 09:57:14.785" endtime="20221209 09:57:14.791"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Browser Not closed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221209 09:57:14.796" endtime="20221209 09:57:14.796"/>
+</kw>
+<status status="NOT RUN" starttime="20221209 09:57:14.792" endtime="20221209 09:57:14.797"/>
+</branch>
+<status status="FAIL" starttime="20221209 09:57:14.748" endtime="20221209 09:57:14.798"/>
+</if>
+<status status="FAIL" starttime="20221209 09:57:12.243" endtime="20221209 09:57:14.798"/>
+</kw>
+<status status="FAIL" starttime="20221209 09:57:12.240" endtime="20221209 09:57:14.813">Evaluating IF condition failed: Evaluating expression 'Yes == "Yes"' failed: NameError: name 'Yes' is not defined nor importable as module</status>
+</test>
+<status status="FAIL" starttime="20221209 09:57:09.570" endtime="20221209 09:57:14.832"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Sample">Sample</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221209 09:57:14.837" level="ERROR">Calling method 'end_suite' of listener 'robotframework_debug_adapter.listeners.DebugListener' failed: IndexError: pop from an empty deque</msg>
+</errors>
+</robot>

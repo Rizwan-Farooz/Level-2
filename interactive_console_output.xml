@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221208 20:45:59.005" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\rizwanfarooz.ks\.vscode\extensions\robocorp.robotframework-lsp-1.6.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Close Application">
+<msg timestamp="20221208 20:46:01.575" level="FAIL">No keyword with name 'Close Application' found.</msg>
+<status status="FAIL" starttime="20221208 20:46:01.575" endtime="20221208 20:46:01.576"/>
+</kw>
+<kw name="Get Selection From User">
+<var>${users}</var>
+<arg>You want to close the browser</arg>
+<arg>Yes</arg>
+<arg>No</arg>
+<msg timestamp="20221208 20:46:13.802" level="FAIL">No keyword with name 'Get Selection From User' found.</msg>
+<status status="FAIL" starttime="20221208 20:46:13.799" endtime="20221208 20:46:13.802"/>
+</kw>
+<if>
+<branch type="IF" condition="${users} == &quot;Yes&quot;">
+<kw name="Close Browser">
+<status status="NOT RUN" starttime="20221208 20:46:13.808" endtime="20221208 20:46:13.808"/>
+</kw>
+<status status="NOT RUN" starttime="20221208 20:46:13.803" endtime="20221208 20:46:13.808"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" library="BuiltIn">
+<arg>Browser Not closed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20221208 20:46:13.809" endtime="20221208 20:46:13.809"/>
+</kw>
+<status status="NOT RUN" starttime="20221208 20:46:13.808" endtime="20221208 20:46:13.809"/>
+</branch>
+<status status="NOT RUN" starttime="20221208 20:46:13.803" endtime="20221208 20:46:13.809"/>
+</if>
+<status status="PASS" starttime="20221208 20:45:59.154" endtime="20221208 20:46:24.386"/>
+</kw>
+<status status="PASS" starttime="20221208 20:45:59.153" endtime="20221208 20:46:24.386"/>
+</test>
+<status status="PASS" starttime="20221208 20:45:59.035" endtime="20221208 20:46:24.388"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
